@@ -4,14 +4,11 @@ var faker = require('@faker-js/faker');
 context('Funcionalidade pagina de Produto', () => {
 
     beforeEach(() => {
-        cy.visit('http://lojaebac.ebaconline.art.br/produto/')
+        cy.visit('produto/')
     });
 
     it('Deve selecionar um produto da lista', () => {
         cy.get('[class="product-block grid"]')
-            //.first()
-            //.last() 
-            //.eq(3) 
             .contains('Ariel Roll Sleeve Sweatshirt')
             .click()
     });
